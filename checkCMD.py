@@ -11,10 +11,10 @@ else:
     cmd=cmd_json["cmd"]
     if(cmd=="take-a-pic"):
         print("take a pic")
-        system("fswebcam -d /dev/video0 800x600 --bottom-banner %s/pics/%s.jpg" % (getcwd(),int(time())))
-        system("%s/push.sh" % (getcwd()))
+        system("fswebcam -d /dev/video0 800x600 --bottom-banner %s/pics/%s.jpg" % (getcwd(),int(time())))        
     if(cmd=="turn-on-light"):
         print("turn on light")
     if(cmd=="turn-off-light"):
         print("turn off light")
-    print(cmd)
+    system("cpu | grep Temp > %s/status.txt" % (getcwd()))
+    system("%s/push.sh" % (getcwd()))
