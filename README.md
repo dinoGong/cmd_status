@@ -37,6 +37,6 @@ ps:定时配置
 
 crontab -e
 
-*/1 * * * * /usr/bin/python /你的路径/checkCMD.py
+*/1 * * * * /你的路径/checkCMD.sh
 
 sudo service cron start
