@@ -1,3 +1,16 @@
 from os import *
+import json
 return_text=system("git pull |grep cmd.json")
-print (return_text)
+if (return_text==256):
+    print ("no new cmd")
+else:
+    cmd_f=open("cmd.json")
+    cmd_json=json.load(cmd_f)
+    cmd=json["cmd"]
+    if(cmd=="take-a-pic"):
+        print("take a pic")
+    if(cmd=="turn-on-light"):
+        print("turn on light")
+    if(cmd=="turn-off-light"):
+        print("turn off light")
+    print(cmd)
