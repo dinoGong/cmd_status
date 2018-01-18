@@ -12,7 +12,7 @@ else:
     if(cmd=="take-a-pic"):
         print("take a pic")
         system("fswebcam -d /dev/video0 %s/pics/%s.jpg" % (getcwd(),int(time())))
-        system("%s/push.sh" % (os.getcwd()))
+        system("%s/push.sh" % (getcwd()))
     if(cmd=="turn-on-light"):
         print("turn on light")
     if(cmd=="turn-off-light"):
