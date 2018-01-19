@@ -16,5 +16,7 @@ else:
         print("turn on light")
     if(cmd=="turn-off-light"):
         print("turn off light")
+    if(cmd=="power-off"):
+        system("sudo halt")
     system("cpu | grep Temp > %s/status.txt" % (getcwd()))
     system("%s/push.sh" % (getcwd()))
