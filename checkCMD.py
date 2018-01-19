@@ -11,7 +11,7 @@ else:
     cmd=cmd_json["cmd"]
     if(cmd=="take-a-pic"):
         print("take a pic")
-        system("fswebcam -d /dev/video0 800x600 --bottom-banner %s/pics/%s.jpg" % (getcwd(),int(time())))        
+        system("fswebcam -d /dev/video0 -r 1280x960 --bottom-banner %s/pics/%s.jpg" % (getcwd(),int(time())))        
     if(cmd=="turn-on-light"):
         print("turn on light")
     if(cmd=="turn-off-light"):
