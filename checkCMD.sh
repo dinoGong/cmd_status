@@ -1,2 +1,2 @@
-cd /root/cmd_status
+cd $HOME/cmd_status
 /usr/bin/python ./checkCMD.py
